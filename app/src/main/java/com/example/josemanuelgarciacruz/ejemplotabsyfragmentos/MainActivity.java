@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        DiaFragmentPagerAdapter seccionesFragmentPagerAdapter = new DiaFragmentPagerAdapter(getSupportFragmentManager());
+        DiaFragmentPagerAdapter diaFragmentPagerAdapter = new DiaFragmentPagerAdapter(getSupportFragmentManager());
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager_app_bar_main);
-        viewPager.setAdapter(seccionesFragmentPagerAdapter);
+        viewPager.setAdapter(diaFragmentPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_app_bar_main);
         tabLayout.setupWithViewPager(viewPager);

@@ -31,7 +31,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/viewPager_app_bar_main"/>
 
+
+
+    <!-- Ya no queremos que se muestre
+    hello world y secativamos esta línea
+
     <include layout="@layout/content_main" />
+
+    -->
+
+
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

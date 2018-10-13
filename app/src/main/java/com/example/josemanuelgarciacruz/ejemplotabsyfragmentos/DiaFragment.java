@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -53,13 +54,42 @@ public class DiaFragment extends Fragment {
         if (getArguments() != null) {
             mPosition = getArguments().getInt(ARG_POSITION);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dia, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_dia, container, false);
+
+        TextView textViewFragmento = (TextView) view.findViewById(R.id.testViewFragmento);
+
+        switch (mPosition){
+            case 0:
+                textViewFragmento.setText("Lunes");
+                break;
+            case 1:
+                textViewFragmento.setText("Martes");
+                break;
+            case 2:
+                textViewFragmento.setText("Miércoles");
+                break;
+            case 3:
+                textViewFragmento.setText("Jueces");
+                break;
+            case 4:
+                textViewFragmento.setText("Viernes");
+                break;
+            case 5:
+                textViewFragmento.setText("Sábaso");
+                break;
+            case 6:
+                textViewFragmento.setText("Domingo");
+                break;
+        }
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
